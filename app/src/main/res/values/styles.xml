@@ -1,4 +1,4 @@
-<resources xmlns:app="http://schemas.android.com/apk/res-auto">
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -28,6 +28,8 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@color/toolBarColor_default</item>
         <item name="android:textSize">20sp</item>
+        <item name="android:translationZ" tools:ignore="NewApi">4dp</item>
+        <item name="android:elevation" tools:ignore="NewApi">4dp</item>
     </style>
 <!--设置页面的cardView-->
     <style name="settingCardView">
