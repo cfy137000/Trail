@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:layout="@layout/text_notice_way_title_char">
+    </PreferenceCategory>
+
+    <SwitchPreference
+        android:title="接收聊天信息"
+        android:key="switch_notice_way_char_receive"
+        android:defaultValue="true"
+        android:summaryOn="接收聊天信息"
+        android:summaryOff="不接收聊天信息" />
+    <SwitchPreference
+        android:title="声音"
+        android:key="switch_notice_way_char_sound"
+        android:defaultValue="true"
+        android:summaryOn="开启声音"
+        android:summaryOff="关闭声音"
+        android:dependency="switch_notice_way_char_receive"/>
+    <SwitchPreference
+        android:title="震动"
+        android:key="switch_notice_way_char_shock"
+        android:defaultValue="true"
+        android:summaryOn="开启震动"
+        android:summaryOff="关闭震动"
+        android:dependency="switch_notice_way_char_receive"/>
+
+</PreferenceScreen>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Trail</string>
+    <string name="setting_personal_center"> &#160; 个人中心</string>
+    <string name="setting_tomato"> &#160; 番茄时钟</string>
+    <string name="setting_notice_way"> &#160; 通知方式</string>
+    <string name="setting_notice_time"> &#160; 默认提醒时间</string>
+    <string name="notice_way_sound">声音</string>
+    <string name="notice_way_shock">震动</string>
+    <string name="notice_way_char">聊天</string>
+    <string name="notice_way_notice">提醒</string>
+    <string name="notice_way_receive">接收新消息</string>
+    <string name="notice_way">提醒方式</string>
+    <string name="setting">设置</string>
+</resources>
