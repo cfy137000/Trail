@@ -17,5 +17,5 @@
     <string name="birthday_default">1970-01-01</string>
     <string name="sex">性别</string>
     <string name="sex_default">无</string>
-
+    <string name="input_nike">请输入昵称</string>
 </resources>
