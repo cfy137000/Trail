@@ -4,4 +4,5 @@
 
     <dimen name="dp_0">0dp</dimen>
     <dimen name="dp_5">5dp</dimen>
+    <dimen name="preference_margin">19dp</dimen>
 </resources>

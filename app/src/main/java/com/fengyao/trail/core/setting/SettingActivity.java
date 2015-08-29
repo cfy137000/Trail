@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import com.fengyao.trail.R;
 import com.fengyao.trail.base.BaseActivity;
+import com.fengyao.trail.core.setting.noticeWay.NoticeWayActivity;
+import com.fengyao.trail.core.setting.personalCenter.PersonalCenterActivity;
 
 /**
  * Created by Chen fengYao on 2015/8/27.
@@ -60,6 +62,7 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
         Intent intent = new Intent();
         switch (v.getId()){
             case R.id.tv_setting_personal_center:
+                intent.setClass(this, PersonalCenterActivity.class);
                 break;
             case R.id.tv_setting_tomato:
                 break;

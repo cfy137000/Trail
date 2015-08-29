@@ -4,13 +4,13 @@
         android:layout="@layout/text_notice_way_title_remind"
         >
     </PreferenceCategory>
-    <SwitchPreference
+    <com.fengyao.trail.widget.CheckBoxPreference
         android:title="声音"
         android:key="switch_notice_way_remind_sound"
         android:defaultValue="true"
         android:summaryOn="开启声音"
         android:summaryOff="关闭声音" />
-    <SwitchPreference
+    <com.fengyao.trail.widget.CheckBoxPreference
         android:title="震动"
         android:key="switch_notice_way_remind_shock"
         android:defaultValue="true"
