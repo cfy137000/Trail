@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">Trail</string>
     <string name="setting_personal_center"> &#160; 个人中心</string>
+    <string name="setting_personal_center_title">个人中心</string>
     <string name="setting_tomato"> &#160; 番茄时钟</string>
+    <string name="setting_tomato_title">番茄时钟</string>
     <string name="setting_notice_way"> &#160; 通知方式</string>
     <string name="setting_notice_time"> &#160; 默认提醒时间</string>
     <string name="notice_way_sound">声音</string>
@@ -18,4 +20,6 @@
     <string name="sex">性别</string>
     <string name="sex_default">无</string>
     <string name="input_nike">请输入昵称</string>
+    <string name="setting_tomato_work_text">25分钟</string>
+    <string name="setting_tomato_work_break">10分钟</string>
 </resources>

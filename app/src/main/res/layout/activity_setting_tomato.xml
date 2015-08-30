@@ -1,22 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <include layout="@layout/toolbar_default"/>
+    <include layout="@layout/toolbar_default" />
+
     <android.support.v7.widget.CardView style="@style/settingCardView">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <android.support.v7.widget.AppCompatTextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="设置番茄时长"/>
 
+            <TextView
+                style="@style/setting_notice_way_subtitle_tv"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:text="设置番茄时长" />
+
+            <com.gc.materialdesign.views.Slider
+                android:id="@+id/slider_setting_tomato_work"
+                style="@style/setting_tomato_slider"
+                android:background="@color/setting_tomato_slider"
+                materialdesign:max="60"
+                materialdesign:min="15"
+                materialdesign:showNumberIndicator="true" />
+
+            <TextView
+                android:id="@+id/tv_setting_tomato_work"
+                style="@style/setting_tomato_hint_text"
+                android:text="@string/setting_tomato_work_text" />
         </LinearLayout>
-        </android.support.v7.widget.CardView>
-    <android.support.v7.widget.CardView style="@style/settingCardView">
     </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        style="@style/settingCardView"
+        android:layout_marginTop="@dimen/dp_15">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/setting_notice_way_subtitle_tv"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:text="设置休息时长" />
+
+            <com.gc.materialdesign.views.Slider
+                android:id="@+id/slider_setting_tomato_break"
+                style="@style/setting_tomato_slider"
+                android:background="@color/setting_tomato_slider"
+                materialdesign:max="30"
+                materialdesign:min="5"
+                materialdesign:showNumberIndicator="true" />
+
+            <TextView
+                android:id="@+id/tv_setting_tomato_break"
+                style="@style/setting_tomato_hint_text"
+                android:text="@string/setting_tomato_work_break" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView style="@style/settingCardView"></android.support.v7.widget.CardView>
 </LinearLayout>

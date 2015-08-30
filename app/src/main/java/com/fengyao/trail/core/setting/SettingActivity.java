@@ -10,6 +10,7 @@ import com.fengyao.trail.R;
 import com.fengyao.trail.base.BaseActivity;
 import com.fengyao.trail.core.setting.noticeWay.NoticeWayActivity;
 import com.fengyao.trail.core.setting.personalCenter.PersonalCenterActivity;
+import com.fengyao.trail.core.setting.tomato.TomatoSettingActivity;
 
 /**
  * Created by Chen fengYao on 2015/8/27.
@@ -65,6 +66,7 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
                 intent.setClass(this, PersonalCenterActivity.class);
                 break;
             case R.id.tv_setting_tomato:
+                intent.setClass(this, TomatoSettingActivity.class);
                 break;
             case R.id.tv_setting_notice_way://跳转到通知方式
                 intent.setClass(this,NoticeWayActivity.class);
