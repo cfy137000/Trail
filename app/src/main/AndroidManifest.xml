@@ -16,6 +16,7 @@
         <activity android:name=".core.setting.noticeWay.NoticeWayActivity"/>
         <activity android:name=".core.setting.personalCenter.PersonalCenterActivity"/>
         <activity android:name=".core.setting.tomato.TomatoSettingActivity"/>
+        <activity android:name=".core.setting.noticeTime.NoticeTimeActivity"/>
     </application>
 
 </manifest>

@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.fengyao.trail.R;
 import com.fengyao.trail.base.BaseActivity;
+import com.fengyao.trail.core.setting.noticeTime.NoticeTimeActivity;
 import com.fengyao.trail.core.setting.noticeWay.NoticeWayActivity;
 import com.fengyao.trail.core.setting.personalCenter.PersonalCenterActivity;
 import com.fengyao.trail.core.setting.tomato.TomatoSettingActivity;
@@ -58,6 +59,7 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
         noticeTimeTv.setOnClickListener(this);
     }
 
+    //点击事件,跳转到四个子设置页面
     @Override
     public void onClick(View v) {
         Intent intent = new Intent();
@@ -72,6 +74,7 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
                 intent.setClass(this,NoticeWayActivity.class);
                 break;
             case R.id.tv_setting_notice_time:
+                intent.setClass(this, NoticeTimeActivity.class);
                 break;
         }
         startActivity(intent);

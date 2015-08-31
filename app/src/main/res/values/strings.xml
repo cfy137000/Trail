@@ -6,12 +6,13 @@
     <string name="setting_tomato_title">番茄时钟</string>
     <string name="setting_notice_way"> &#160; 通知方式</string>
     <string name="setting_notice_time"> &#160; 默认提醒时间</string>
+    <string name="setting_notice_time_title">默认提醒时间</string>
     <string name="notice_way_sound">声音</string>
     <string name="notice_way_shock">震动</string>
     <string name="notice_way_char">聊天</string>
     <string name="notice_way_notice">提醒</string>
     <string name="notice_way_receive">接收新消息</string>
-    <string name="notice_way">提醒方式</string>
+    <string name="notice_way">通知方式</string>
     <string name="setting">设置</string>
     <string name="nick_name">昵称</string>
     <string name="nick_name_defult">默认昵称</string>
@@ -23,4 +24,10 @@
     <string name="setting_tomato_work_text">25分钟</string>
     <string name="setting_tomato_work_break">10分钟</string>
     <string name="setting_tomato_button">设置屏蔽应用</string>
+    <string name="setting_notice_time_remind">提醒</string>
+    <string name="notice_time_defult">默认提醒时间</string>
+    <string name="setting_notice_time_mission">任务</string>
+    <string name="notice_time_mission_before">任务开始前提醒时间</string>
+    <string name="notice_time_mission_after">任务结束前提醒时间</string>
+    <string name="notice_time_item_text_default">提前X分钟</string>
 </resources>
