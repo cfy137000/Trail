@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/navigation_item_main"
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/navigation_main" />
+        <item
+            android:id="@+id/navigation_item_remind"
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/navigation_remind" />
+        <item
+            android:id="@+id/navigation_item_mission"
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/navigation_mission" />
+        <item
+            android:id="@+id/navigation_item_calendar"
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/navigation_calendar" />
+
+        <item
+            android:id="@+id/navigation_item_tomato"
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/navigation_tomato" />
+
+        <item
+            android:id="@+id/navigation_item_goal"
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/navigation_goal" />
+
+        <item
+            android:id="@+id/navigation_item_setting"
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/navigation_setting" />
+    </group>
+</menu>

@@ -4,4 +4,5 @@
     <color name="black">#000000</color>
     <color name="setting_notice_way_each_text">#cf000000</color>
     <color name="setting_tomato_slider">#004D40</color>
+    <color name="state_menu_item_selected">#607D8B</color>
 </resources>

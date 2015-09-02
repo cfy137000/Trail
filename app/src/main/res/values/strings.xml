@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Trail</string>
+    <string name="app_name">轨迹</string>
     <string name="setting_personal_center"> &#160; 个人中心</string>
     <string name="setting_personal_center_title">个人中心</string>
     <string name="setting_tomato"> &#160; 番茄时钟</string>
@@ -29,5 +29,16 @@
     <string name="setting_notice_time_mission">任务</string>
     <string name="notice_time_mission_before">任务开始前提醒时间</string>
     <string name="notice_time_mission_after">任务结束前提醒时间</string>
-    <string name="notice_time_item_text_default">提前X分钟</string>
+    <string name="notice_time_item_text_default">提前10分钟</string>
+    <!--首页侧滑栏的条目-->
+    <string name="navigation_main">首页</string>
+    <string name="navigation_remind">提醒</string>
+    <string name="navigation_mission">任务</string>
+    <string name="navigation_calendar">日历</string>
+    <string name="navigation_tomato">番茄时钟</string>
+    <string name="navigation_goal">人生目标</string>
+    <string name="navigation_setting">设置</string>
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
 </resources>

@@ -18,19 +18,19 @@ import android.widget.ImageView;
  * Created by Chen fengYao on 2015/8/4.
  * 用于显示圆角矩形的ImageView
  */
-public class RoundImageView extends ImageView{
+public class RoundedSquareImageView extends ImageView{
 
     private Paint paint;
 
-    public RoundImageView(Context context) {
+    public RoundedSquareImageView(Context context) {
         this(context,null);
     }
 
-    public RoundImageView(Context context, AttributeSet attrs) {
+    public RoundedSquareImageView(Context context, AttributeSet attrs) {
         this(context, attrs,0);
     }
 
-    public RoundImageView(Context context, AttributeSet attrs, int defStyle) {
+    public RoundedSquareImageView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         paint  = new Paint();
     }

@@ -40,6 +40,7 @@
         <item name="android:layout_marginTop">10dp</item>
         <item name="android:layout_marginLeft">5dp</item>
         <item name="android:layout_marginRight">5dp</item>
+
     </style>
     <!--设置通知方式的小标题-->
     <style name="setting_notice_way_subtitle_tv">
