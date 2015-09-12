@@ -36,10 +36,7 @@
 
                 <TextView android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="lalal"
-                    android:gravity="bottom"
-                    android:layout_gravity="bottom"
-                    android:layout_alignParentBottom="true"/>
+                    android:background="#60000000" />
             </RelativeLayout>
         </LinearLayout>
     </com.fengyao.trail.widget.MyScrollView>

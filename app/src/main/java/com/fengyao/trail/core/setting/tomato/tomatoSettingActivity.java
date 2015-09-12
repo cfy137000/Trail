@@ -7,8 +7,12 @@ import android.widget.TextView;
 
 import com.fengyao.trail.R;
 import com.fengyao.trail.base.BaseActivity;
+import com.fengyao.trail.data.SQLTool;
+import com.fengyao.trail.data.tables.SettingTomatoTable;
 import com.gc.materialdesign.views.ButtonRectangle;
 import com.gc.materialdesign.views.Slider;
+
+import java.util.ArrayList;
 
 /**
  * Created by Chen fengYao on 2015/8/30.
@@ -19,6 +23,7 @@ public class TomatoSettingActivity extends BaseActivity implements View.OnClickL
     private Slider workSlider,breakSlider;
     private TextView workTv,breakTv;
     private ButtonRectangle blockedBtn;
+    private SettingTomatoTable tomatoSQL;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,12 +56,14 @@ public class TomatoSettingActivity extends BaseActivity implements View.OnClickL
             @Override
             public void onValueChanged(int value) {
                 workTv.setText(value+"分钟");
+                tomatoSQL.upDataTomatoWorkTime(value);
             }
         });
         breakSlider.setOnValueChangedListener(new Slider.OnValueChangedListener() {
             @Override
             public void onValueChanged(int value) {
                 breakTv.setText(value+"分钟");
+                tomatoSQL.upDataTomatoBreakTime(value);
             }
         });
         //textview
@@ -65,6 +72,15 @@ public class TomatoSettingActivity extends BaseActivity implements View.OnClickL
         //底部的button
         blockedBtn = (ButtonRectangle) findViewById(R.id.btn_setting_tomato_blocked);
         blockedBtn.setOnClickListener(this);
+        //番茄设置表
+        tomatoSQL = (SettingTomatoTable) sqlTool.tableFactory(SQLTool.TableName.settingTomato);
+        ArrayList<Integer> data = (ArrayList<Integer>) tomatoSQL.qureSettingTomato();
+        breakTv.setText(data.get(0).toString());
+        workTv.setText(data.get(1).toString());
+
+        breakSlider.setValue(data.get(0));
+        workSlider.setValue(data.get(1));
+
     }
 
     @Override

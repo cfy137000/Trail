@@ -23,6 +23,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1px</item>
         <item name="android:background">#E0E0E0</item>
+        <item name="android:clickable">false</item>
     </style>
     <!--ToolBar-->
     <style name="toolBar">
@@ -106,4 +107,22 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">right</item>
     </style>
+
+
+    <!-- middle gray-->
+    <style name="DemoTextStyleMiddle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/main_regist</item>
+    </style>
+
+    <style name="floating_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/dp_15</item>
+        <item name="android:layout_marginRight">@dimen/dp_15</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+
+    </style>
+
 </resources>

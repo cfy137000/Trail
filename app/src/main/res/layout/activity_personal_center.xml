@@ -36,6 +36,7 @@
                     android:text="@string/nick_name" />
 
                 <TextView
+                    android:id="@+id/tv_setting_personal_center_nick"
                     style="@style/setting_personal_center_text_right"
                     android:text="@string/nick_name_defult" />
             </LinearLayout>
@@ -51,7 +52,7 @@
                     android:text="@string/birthday_hint" />
 
                 <TextView
-                    android:id="@+id/tv_setting_personal_center_nick"
+                    android:id="@+id/tv_setting_personal_center_birthday"
                     style="@style/setting_personal_center_text_right"
                     android:text="@string/birthday_default" />
             </LinearLayout>

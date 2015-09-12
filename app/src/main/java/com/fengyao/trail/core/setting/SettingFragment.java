@@ -79,11 +79,7 @@ public class SettingFragment extends BaseFragment implements View.OnClickListene
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        //startBackgroundAnim();
     }
 
-//    private void startBackgroundAnim() {
-//        Animation animation = AnimationUtils.loadAnimation(getActivity(),R.anim.setting_background);
-//        settingBackgroundIv.startAnimation(animation);
-//    }
+
 }

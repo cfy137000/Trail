@@ -31,4 +31,6 @@ dependencies {
     compile project(':nice-spinner-master')
     compile project(':MaterialDesign')
     compile project(':library-2.4.0')
+    compile files('libs/microlog4android-1.0.1.jar')
+    compile files('libs/easemobchat_2.2.2.jar')
 }

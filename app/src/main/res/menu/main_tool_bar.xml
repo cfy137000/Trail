@@ -5,9 +5,8 @@
     tools:context=".MainActivity">
     <item
         android:id="@+id/toolbar_char"
-        android:icon="@mipmap/ic_launcher"
-        android:title="@string/navigation_mission"
-        android:checkable="true"
+        android:icon="@mipmap/ic_char"
+        android:title="@string/notice_way_char"
         app:showAsAction="ifRoom"
         />
 

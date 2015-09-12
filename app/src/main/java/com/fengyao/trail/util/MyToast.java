@@ -1,5 +1,6 @@
 package com.fengyao.trail.util;
 
+import android.os.Looper;
 import android.widget.Toast;
 
 import com.fengyao.trail.base.BaseApplication;
@@ -10,6 +11,8 @@ import com.fengyao.trail.base.BaseApplication;
  */
 public class MyToast {
     public static void mToast(String msg){
+
         Toast.makeText(BaseApplication.getContext(),msg+"",Toast.LENGTH_SHORT).show();
+
     }
 }

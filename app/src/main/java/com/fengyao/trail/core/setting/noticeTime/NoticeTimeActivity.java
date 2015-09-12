@@ -5,12 +5,15 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.fengyao.trail.R;
 import com.fengyao.trail.base.BaseActivity;
+import com.fengyao.trail.data.SQLTool;
+import com.fengyao.trail.data.tables.SettingNoticeTimeTable;
 import com.gc.materialdesign.views.Slider;
 
 /**
@@ -22,6 +25,7 @@ public class NoticeTimeActivity extends BaseActivity {
     private TextView remindTv, missionBeforeTv, missionAfterTv;
     private TextView remindDefaultTv, missionBeforeDefaultTv, missionAfterDefaultTv;
     private Slider remindSlider, missionBeforeSlider, missionAfterSlider;
+    private SettingNoticeTimeTable settingNoticeTimeTable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +57,6 @@ public class NoticeTimeActivity extends BaseActivity {
         missionAfterDefaultTv = (TextView) findViewById(R.id.tv_mission_after_time_deault);
 
 
-
         remindSlider = (Slider) findViewById(R.id.slider_remind);
         missionBeforeSlider = (Slider) findViewById(R.id.slider_missiom_before);
         missionAfterSlider = (Slider) findViewById(R.id.slider_missiom_after);
@@ -65,45 +68,49 @@ public class NoticeTimeActivity extends BaseActivity {
         remindSlider.setOnValueChangedListener(new Slider.OnValueChangedListener() {
             @Override
             public void onValueChanged(int value) {
-                switch (value) {
-                    case 0:
-                        remindDefaultTv.setText("事件发生时");
-                        break;
-                    default:
-                        remindDefaultTv.setText("事件开始前" + value + "分钟提醒");
-                        break;
-                }
-
+                mSetText(remindDefaultTv, value);
             }
         });
         missionBeforeSlider.setOnValueChangedListener(new Slider.OnValueChangedListener() {
             @Override
             public void onValueChanged(int value) {
-                switch (value) {
-                    case 0:
-                        missionBeforeDefaultTv.setText("任务开始时提醒");
-                        break;
-                    default:
-                        missionBeforeDefaultTv.setText("任务开始前" + value + "分钟提醒");
-                        break;
-                }
-
+                mSetText(missionBeforeDefaultTv, value);
             }
         });
         missionAfterSlider.setOnValueChangedListener(new Slider.OnValueChangedListener() {
             @Override
             public void onValueChanged(int value) {
-                switch (value) {
-                    case 0:
-                        missionAfterDefaultTv.setText("任务结束时提醒");
-                        break;
-                    default:
-                        missionAfterDefaultTv.setText("任务结束前" + value + "分钟提醒");
-                        break;
-                }
-
+                mSetText(missionAfterDefaultTv, value);
             }
         });
+
+        //初始化数据库
+        settingNoticeTimeTable = (SettingNoticeTimeTable) sqlTool.tableFactory(SQLTool.TableName.settingNoticeTime);
+        //通过数据库的数据初始化
+        remindSlider.setValue(settingNoticeTimeTable.getSettingNoticeTimeRemind());
+        missionBeforeSlider.setValue(settingNoticeTimeTable.getSettingNoticeTimeMissionBefor());
+        missionAfterSlider.setValue(settingNoticeTimeTable.getSettingNoticeTimeAfter());
+        mSetText(remindDefaultTv, settingNoticeTimeTable.getSettingNoticeTimeRemind());
+        mSetText(missionBeforeDefaultTv, settingNoticeTimeTable.getSettingNoticeTimeMissionBefor());
+        mSetText(missionAfterDefaultTv, settingNoticeTimeTable.getSettingNoticeTimeAfter());
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        settingNoticeTimeTable.setRemind(remindSlider.getValue());
+        settingNoticeTimeTable.setMissionBefor(missionBeforeSlider.getValue());
+        settingNoticeTimeTable.setMissionAfter(missionAfterSlider.getValue());
+    }
+
+    private void mSetText(TextView textView, int value) {
+        switch (value) {
+            case 0:
+                textView.setText("任务结束时提醒");
+                break;
+            default:
+                textView.setText("任务结束前" + value + "分钟提醒");
+                break;
+        }
+    }
 }

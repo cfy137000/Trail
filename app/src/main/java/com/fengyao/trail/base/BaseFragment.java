@@ -2,6 +2,7 @@ package com.fengyao.trail.base;
 
 import android.support.v4.app.Fragment;
 
+import com.fengyao.trail.data.SQLTool;
 import com.fengyao.trail.util.Values;
 
 /**
@@ -10,4 +11,5 @@ import com.fengyao.trail.util.Values;
  */
 public class BaseFragment extends Fragment {
     public Values values = Values.getValues();
+    public SQLTool sqlTool = new SQLTool();
 }

@@ -1,6 +1,22 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.fengyao.trail">
-    <uses-permission android:name="android.permission.VIBRATE"/>
+    <!-- Required -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+
     <application
         android:name=".base.BaseApplication"
         android:allowBackup="true"
@@ -9,15 +25,45 @@
         android:theme="@style/AppTheme">
         <activity android:name=".core.main.MainPageActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            </activity>
+        </activity>
 
-        <activity android:name=".core.setting.noticeWay.NoticeWayActivity"/>
-        <activity android:name=".core.setting.personalCenter.PersonalCenterActivity"/>
-        <activity android:name=".core.setting.tomato.TomatoSettingActivity"/>
-        <activity android:name=".core.setting.noticeTime.NoticeTimeActivity"/>
+        <activity android:name=".core.setting.noticeWay.NoticeWayActivity" />
+        <activity android:name=".core.setting.personalCenter.PersonalCenterActivity" />
+        <activity android:name=".core.setting.tomato.TomatoSettingActivity" />
+        <activity android:name=".core.setting.noticeTime.NoticeTimeActivity" />
+        <activity
+            android:name=".core.tomato.BackToWorkActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.fengyao.trail.tomato.BackToWorkActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="802360#trail" />
+        <!-- 声明sdk所需的service SDK核心功能-->
+        <service android:name="com.easemob.chat.EMChatService" />
+
+        <service
+            android:name=".service.TomatoService"
+            android:process=":remote"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.fengyao.trail.service" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".core.tomato.TomatoWorkReceiver">
+            <intent-filter>
+                <action android:name="com.fengyao.trail.core.tomato.BACK_TO_WORK" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
